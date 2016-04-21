@@ -1,6 +1,6 @@
 Package.describe({
   name: 'justindra:accounts-tanda',
-  version: '0.0.1',
+  version: '0.0.3',
   summary: 'Login service for Tanda accounts',
   git: 'https://github.com/justindra/meteor-accounts-tanda.git',
   documentation: 'README.md'
