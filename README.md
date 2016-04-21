@@ -2,6 +2,8 @@
 
 A login service for [Tanda](https://www.tanda.co/).
 
+## Installation
+
 To add to your meteor package,
 
     meteor add justindra:accounts-tanda
