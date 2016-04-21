@@ -7,14 +7,13 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.3.1');
-  api.use('ecmascript');
-  api.mainModule('justindra-accounts-tanda.js');
-});
+  api.use('accounts-base', ['client', 'server']);
+  // Export Accounts (etc) to packages using this one.
+  api.imply('accounts-base', ['client', 'server']);
+  api.use('accounts-oauth', ['client', 'server']);
+  api.use('justindra:tanda', ['client', 'server']);
 
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.use('justindra-accounts-tanda');
-  api.mainModule('justindra-accounts-tanda-tests.js');
+  api.addFiles('tanda_login_button.css', 'client');
+
+  api.addFiles('tanda.js');
 });
