@@ -7,11 +7,12 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
+  api.versionsFrom('1.0');
   api.use('accounts-base', ['client', 'server']);
   // Export Accounts (etc) to packages using this one.
   api.imply('accounts-base', ['client', 'server']);
   api.use('accounts-oauth', ['client', 'server']);
-  api.use('justindra:tanda', ['client', 'server']);
+  api.use('justindra:tanda@0.1.1', ['client', 'server']);
 
   api.addFiles('tanda_login_button.css', 'client');
 
